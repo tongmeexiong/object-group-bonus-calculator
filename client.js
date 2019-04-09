@@ -40,4 +40,25 @@ const employees = [
 // This is not a race. Everyone on your team should understand what is happening.
 // Ask questions when you don't.
 
+// Create function to take one Employee Object 
+// new objects 
+let bonusReviews = {
+  name: name,
+  bonusPercentage: bonusPercentage, 
+  totalCompensation: totalCompensation,
+  totalBonus: totalBonus 
+
+}
+function bonusCalculation(employeeName) {
+  if (employees.reviewRating > 2  ) {
+    return 'No Bonus'
+  } else if (employees.reviewRating === 3){
+    return annualSalary *.04; 
+    // Return the bonus reviews of new object
+    return bonusReviews; 
+  }
+}
+
+
+
 console.log( employees );
