@@ -42,21 +42,27 @@ const employees = [
 
 // Create function to take one Employee Object 
 // new objects 
+
 let bonusReviews = {
   name: name,
-  bonusPercentage: bonusPercentage, 
-  totalCompensation: totalCompensation,
-  totalBonus: totalBonus 
+  bonusPercentage: 0,    
+  totalCompensation: 0,
+  totalBonus: 0
 
 }
 function bonusCalculation(employeeName) {
-  if (employees.reviewRating > 2  ) {
+  for ( let i=0; i<employees.length; i++)
+  if (employees[i].reviewRating < 2  ) {
     return 'No Bonus'
-  } else if (employees.reviewRating === 3){
-    return annualSalary *.04; 
+  } else if (employees[i].reviewRating === 3){
+    return employees[i].annualSalary *.04; 
+  } else if (employees[i].reviewRating === 4) {
+    return employees[i].annualSalary * .06; 
+  } else if (employees[i].reviewRating === 5) {
+    return employees[i].annualSalary * .1
+    }
     // Return the bonus reviews of new object
     return bonusReviews; 
-  }
 }
 
 
