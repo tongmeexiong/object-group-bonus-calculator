@@ -50,16 +50,24 @@ let bonusReviews = {
   totalBonus: 0
 
 }
-function bonusCalculation(employeeName) {
-  for ( let i=0; i<employees.length; i++)
-  if (employees[i].reviewRating < 2  ) {
-    return 'No Bonus'
-  } else if (employees[i].reviewRating === 3){
-    return employees[i].annualSalary *.04; 
-  } else if (employees[i].reviewRating === 4) {
-    return employees[i].annualSalary * .06; 
-  } else if (employees[i].reviewRating === 5) {
-    return employees[i].annualSalary * .1
+
+
+bonusCalculation({})
+
+function bonusCalculation(employee) {
+  //for ( let i=0; i<employees.length; i++)
+  if (employee.reviewRating < 2  ) {
+    bonusReviews.bonusPercentage = 0;
+    console.log ('bonusreviews');
+  } else if (employees.reviewRating === 3){
+    bonusReviews.bonusPercentage = .04*employee[i].annualSalary;
+    console.log('bonusreviews');
+  } else if (employees.reviewRating === 4) {
+    bonusReviews.bonusPercentage = .06*employees[i].annualSalary;
+    console.log('bonusreviews');
+  } else if (employees.reviewRating === 5) {
+    bonusReviews.bonusPercentage = .1*employees[i].annualSalary;
+    console.log('bonusreviews');
     }
     // Return the bonus reviews of new object
     return bonusReviews; 
